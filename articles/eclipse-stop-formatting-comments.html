@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+	
+	<title>Stop Eclipse from Auto-Formatting Comments</title>
+
+	<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/skeleton.css">
+	<link rel="stylesheet" href="../css/style.css">
+
+	<link rel="icon" type="image/png" href="favicon.png">
+	<style>	
+		.thumb {
+			display: block;
+			padding: 4px;
+			margin-bottom: 20px;
+			line-height: 1.42857143;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			-webkit-transition: border .2s ease-in-out;
+			-o-transition: border .2s ease-in-out;
+			transition: border .2s ease-in-out;
+		}
+		.caption {
+			padding: 9px;
+			font-weight: bold;
+		}
+	
+	
+	</style>
+
+</head>
+<body>
+	<nav class="navbar">
+		<div class="container">
+			<ul class="navbar-list">
+				<span id="navbar-list-lg">
+					<li class="navbar-item"><a class="navbar-link" href="index.html">About</a></li>
+					<li class="navbar-item"><a class="navbar-link" href="articles.html">Articles</a></li>
+					<li class="navbar-item"><a class="navbar-link" href="software.html">Software</a></li>
+				</span>
+				<span id="navbar-list-sm">
+					<li id="sm-menu-btn" class="navbar-item">
+						<a class="navbar-link" href="/index.html">
+							<span id="menu-icon">
+								<span class="icon-bars"></span>
+							</span>
+						</a>
+					</li>
+				</span>
+			</ul>
+		</div>
+    </nav>
+	
+	<div class="container">
+		<div class="header">
+			<h2 class="title">Stop Eclipse from Auto-Formatting Comments</h2>
+			<div class="panel">
+				<p>Quick Summary:</p>			
+			</div>
+			<div class="article-row">
+				<p>Eclipse's ability to automaticlly format code is a great way to have clean, uniform looking code
+				in your projects.  However, there are probably some places that you'd rather Eclipse not touch.
+				A good example of this is commented-out SQL code.  SQL and Java code are typically formatted very
+				differently, so running the auto-formatter ( + + on Windows) will mangle SQL code.  Compare SQL
+				formatted by hand to the same code after running the formatter:
+				</p>		
+			</div>
+			<div class="article-row">
+				<div class="row">
+					<div class="one-half column category">
+						<div class="thumb">
+							<img class="u-max-full-width" src="../img/1.png">
+							<div class="caption">
+								<p>SQL before formatting</p>
+							</div>
+						</div>
+					</div>
+					<div class="one-half column category">
+						<div class="thumb">
+							<img class="u-max-full-width" src="../img/2.png">
+							<div class="caption">
+								<p>SQL after formatting</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<p>If you are using multi-line comments (/* */), the fix to prevent Eclipse from applying its auto-formatting
+				if very simple: just add a dash (-) after the asterisk at the beginning of the comment (see below).
+				</p>
+			</div>
+			<div class="article-row">
+				<div class="row">
+						<div class="thumb">
+							<img class="u-max-full-width" src="../img/3.png">
+							<div class="caption">
+								<p>The dash on line 148 prevents auto-formatting</p>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
