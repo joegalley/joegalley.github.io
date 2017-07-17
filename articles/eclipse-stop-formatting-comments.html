@@ -17,25 +17,6 @@
 	<link rel="stylesheet" href="../css/style.css">
 
 	<link rel="icon" type="image/png" href="favicon.png">
-	<style>	
-		.thumb {
-			display: block;
-			padding: 4px;
-			margin-bottom: 20px;
-			line-height: 1.42857143;
-			background-color: #fff;
-			border: 1px solid #ddd;
-			-webkit-transition: border .2s ease-in-out;
-			-o-transition: border .2s ease-in-out;
-			transition: border .2s ease-in-out;
-		}
-		.caption {
-			padding: 9px;
-			font-weight: bold;
-		}
-	
-	
-	</style>
 
 </head>
 <body>
@@ -43,9 +24,9 @@
 		<div class="container">
 			<ul class="navbar-list">
 				<span id="navbar-list-lg">
-					<li class="navbar-item"><a class="navbar-link" href="index.html">About</a></li>
-					<li class="navbar-item"><a class="navbar-link" href="articles.html">Articles</a></li>
-					<li class="navbar-item"><a class="navbar-link" href="software.html">Software</a></li>
+					<li class="navbar-item"><a class="navbar-link" href="../index.html">About</a></li>
+					<li class="navbar-item"><a class="navbar-link" href="../articles.html">Articles</a></li>
+					<li class="navbar-item"><a class="navbar-link" href="../software.html">Software</a></li>
 				</span>
 				<span id="navbar-list-sm">
 					<li id="sm-menu-btn" class="navbar-item">
@@ -61,55 +42,51 @@
     </nav>
 	
 	<div class="container">
-		<div class="header">
-			<h2 class="title">Stop Eclipse from Auto-Formatting Comments</h2>
-			<div class="panel">
-				<p>Quick Summary:</p>			
-			</div>
-			<div class="article-row">
+		<div class="main">
+			<div class="page-title">How to Stop Eclipse from Auto-Formatting Comments</div>
+				<div>
+					<span class="tags">Tags:
+						<span class="article-tag tag-eclipse">Eclipse</span>
+					</span>
+				</div>
+				<hr>
 				<p>Eclipse's ability to automaticlly format code is a great way to have clean, uniform looking code
 				in your projects.  However, there are probably some places that you'd rather Eclipse not touch.
 				A good example of this is commented-out SQL code.  SQL and Java code are typically formatted very
-				differently, so running the auto-formatter ( + + on Windows) will mangle SQL code.  Compare SQL
+				differently, so running the auto-formatter (<kbd>Ctrl + Shift + F</kbd> on Windows) will mangle SQL code.  Compare SQL
 				formatted by hand to the same code after running the formatter:
 				</p>		
-			</div>
-			<div class="article-row">
 				<div class="row">
-					<div class="one-half column category">
-						<div class="thumb">
-							<img class="u-max-full-width" src="../img/1.png">
-							<div class="caption">
-								<p>SQL before formatting</p>
-							</div>
-						</div>
-					</div>
-					<div class="one-half column category">
-						<div class="thumb">
-							<img class="u-max-full-width" src="../img/2.png">
-							<div class="caption">
-								<p>SQL after formatting</p>
-							</div>
+					<div class="thumbnail">
+						<img class="u-max-full-width" src="../img/1.png">
+						<div class="caption">
+							<p>SQL before formatting</p>
 						</div>
 					</div>
 				</div>
-			</div>
+				<div class="row">
+					<div class="thumbnail">
+						<img src="../img/2.png">
+						<div class="caption">
+							<p>SQL after formatting</p>
+						</div>
+					</div>
+				</div>
 			<div>
 				<p>If you are using multi-line comments (/* */), the fix to prevent Eclipse from applying its auto-formatting
-				if very simple: just add a dash (-) after the asterisk at the beginning of the comment (see below).
+				is very simple: just add a dash (-) after the asterisk at the beginning of the comment (see below).
 				</p>
 			</div>
-			<div class="article-row">
-				<div class="row">
-						<div class="thumb">
-							<img class="u-max-full-width" src="../img/3.png">
-							<div class="caption">
-								<p>The dash on line 148 prevents auto-formatting</p>
-							</div>
+			<div class="row">
+				<div class="thumbnail">
+					<img src="../img/3.png">
+					<div class="caption">
+						<p>The dash on line 148 prevents auto-formatting</p>
 					</div>
 				</div>
 			</div>
 		</div>
+		<hr>
 	</div>
 	
 </body>
