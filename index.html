@@ -2,6 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- GTM -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NS84W43');</script>
+	<!-- End GTM -->
+
+	<script type="text/javascript">
+    	var _gaq = _gaq || [];
+    	_gaq.push(['_setAccount', 'UA-90736927-1']);
+    	_gaq.push(['_trackPageview']);
+  	</script>
+
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	
@@ -22,6 +36,11 @@
 
 </head>
 <body>
+	<!-- GTM (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS84W43"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End GTM (noscript) -->
+
 	<nav class="navbar">
 		<div class="container">
 			<ul class="navbar-list">
@@ -52,7 +71,11 @@
 					<img id="main-img" class="u-max-full-width" style="margin-bottom: 30px;" src="img/img1.png">
 					<div id="s-links" class="show-lg">
 						<ul>
-							<li><a href="https://www.linkedin.com/in/joegalley"><i class="fa fa-linkedin-square" style="color: #0a76b3;"></i></a></li>
+							<li>
+								<a href="https://www.linkedin.com/in/joegalley" onClick="_gaq.push(['_trackEvent', 'openedLinks', 'click', 'github', '0']);">
+									<i class="fa fa-linkedin-square" style="color: #0a76b3;"></i>
+								</a>
+							</li>
 							<li><a href="https://github.com/joegalley"><i class="fa fa-github-square" style="color: #2f2f2f;"></i></a></li>
 							<li><a href="https://twitter.com/joe_galley"><i class="fa fa-twitter-square" style="color: #1fa0f1;"></i></a></li>
 						</ul>

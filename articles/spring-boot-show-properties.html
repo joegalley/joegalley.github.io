@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+	
+	<title>Spring Boot: List All Properties and their Values</title>
+
+	<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/skeleton.css">
+	<link rel="stylesheet" href="../css/style.css">
+
+	<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+<body>
+	<nav class="navbar">
+		<div class="container">
+			<ul class="navbar-list">
+				<span id="navbar-list-lg">
+					<li class="navbar-item"><a class="navbar-link" href="../index.html">About</a></li>
+					<li class="navbar-item"><a class="navbar-link" href="../articles.html">Articles</a></li>
+					<li class="navbar-item"><a class="navbar-link" href="../software.html">Software</a></li>
+				</span>
+				<span id="navbar-list-sm">
+					<li id="sm-menu-btn" class="navbar-item">
+						<a class="navbar-link" href="/index.html">
+							<span id="menu-icon">
+								<span class="icon-bars"></span>
+							</span>
+						</a>
+					</li>
+				</span>
+			</ul>
+		</div>
+    </nav>
+	
+	<div class="container">
+		<div class="main">
+			<div class="page-title">Spring Boot: How to List All Properties and their Values</div>
+			<div>
+				<span class="tags">Tags:
+					<span class="article-tag tag-spring">Spring Boot</span>
+					<span class="article-tag tag-java">Java</span>
+				</span>
+			</div>
+			<hr>
+			<div class="quick-summary">
+				<p class="summary-title">Quick Summary:</p>
+				<div class="summary-body">
+					<p>1. Autowire an instance of Environment:</p>
+					<pre>
+						<code class="prettyprint lang-java">@Autowired
+Envornment env;</code>
+					</pre>
+					<p>2. Use this code somewhere in your class:</p>
+					<pre><code class="prettyprint lang-java">Map<String, Object> map = new HashMap();
+
+for (Iterator it = ((AbstractEnvironment) env).getPropertySources().iterator(); it.hasNext(); ) {
+	PropertySource propertySource = (PropertySource) it.next();
+	if (propertySource instanceof MapPropertySource) {
+		map.putAll(((MapPropertySource) propertySource).getSource());
+	}
+}</code></pre>
+				</div>
+			</div>
+		</div>
+	</div
+	<hr>
+
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	
+</body>
+</html>
