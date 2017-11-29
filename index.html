@@ -2,20 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script type="text/javascript">
-    	var _gaq = _gaq || [];
-    	_gaq.push(['_setAccount', 'UA-90736927-1']);
-    	_gaq.push(['_trackPageview']);
-  	</script>
-
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
-	
-	<title>Joe Galley</title>
 
 	<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
@@ -26,12 +18,33 @@
 
 	<link rel="icon" type="image/png" href="favicon.png">
 
+	<title>Joe Galley</title>
+
+	<style>
+		#menu-icon {
+			cursor: pointer;
+		}
+
+		.menu-dropdown-content {
+		    display: none;
+		    position: absolute;
+		    right: 0;
+		    background-color: #f9f9f9;
+		    min-width: 160px;
+		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		    z-index: 1;
+		}
+
+		.menu-dropdown-content a {
+		    color: black;
+		    padding: 12px 16px;
+		    text-decoration: none;
+		    display: block;
+		}
+	</style>
+
 </head>
 <body>
-	<!-- GTM (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS84W43"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End GTM (noscript) -->
 
 	<nav class="navbar">
 		<div class="container">
@@ -43,10 +56,15 @@
 				</span>
 				<span id="navbar-list-sm">
 					<li id="sm-menu-btn" class="navbar-item">
-						<a class="navbar-link" href="/index.html">
+						<a class="navbar-link">
 							<span id="menu-icon">
-								<span class="icon-bars"></span>
+								<span class="fa fa-bars fa-2x"></span>
 							</span>
+							<div class="menu-dropdown-content">
+    							<a href="index.html">About</a>
+    							<a href="articles.html">Articles</a>
+    							<a href="software.html">Software</a>
+  							</div>
 						</a>
 					</li>
 				</span>
@@ -56,83 +74,87 @@
 
 	<div class="container">
 		<div class="main">			
-		<div class="row">
-			<div class="four columns">
-				<div style="margin-left: auto; margin-right: auto; width: 75%">
-					<h3 class="title" align="center">Joe Galley</h3>
-					<img id="main-img" class="u-max-full-width" style="margin-bottom: 30px;" src="img/img1.png">
-					<div id="s-links" class="show-lg">
-						<ul>
+			<div class="row">
+				<div class="four columns">
+					<div style="margin-left: auto; margin-right: auto; width: 75%">
+						<h3 class="title" align="center">Joe Galley</h3>
+						<img id="main-img" class="u-max-full-width" style="margin-bottom: 30px;" src="img/img1.png">
+						<div id="s-links" class="show-lg">
+							<ul>
+								<li>
+									<a href="https://www.linkedin.com/in/joegalley">
+										<i class="fa fa-linkedin-square" style="color: #0a76b3;"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://github.com/joegalley">
+										<i class="fa fa-github-square" style="color: #2f2f2f;"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://twitter.com/joe_galley">
+										<i class="fa fa-twitter-square" style="color: #1fa0f1;"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="show-sm">
+							<ul id="sm-s-links">
 							<li>
-								<a href="https://www.linkedin.com/in/joegalley" onclick="trackOutboundLink('https://www.linkedin.com/in/joegalley'); return false;">
-									<i class="fa fa-linkedin-square" style="color: #0a76b3;"></i>
+								<a href="https://www.linkedin.com/in/joegalley">
+							  		<i class="fa fa-linkedin"></i>
 								</a>
 							</li>
-							<li>
-								<a href="https://github.com/joegalley" onClick="ga('send', 'event', 'link', 'click', 'https://github.com/joegalley', null, null);">
-									<i class="fa fa-github-square" style="color: #2f2f2f;"></i>
-								</a>
-							</li>
-							<li>
-								<a href="https://twitter.com/joe_galley" onClick="ga('send', 'event', 'link', 'click', 'https://twitter.com/joe_galley', null, null);">
-									<i class="fa fa-twitter-square" style="color: #1fa0f1;"></i>
-								</a>
-							</li>
-						</ul>
+							  <li>
+							  	<a href="https://github.com/joegalley">
+							  		<i class="fa fa-github"></i>
+							  	</a>
+							  </li>
+							  <li>
+							  	<a href="https://twitter.com/joe_galley" >
+							  		<i class="fa fa-twitter"></i>
+							  	</a>
+							  </li>
+							</ul>
+						</div>							
 					</div>
-					<div class="show-sm">
-						<ul id="sm-s-links">
-						<li>
-							<a href="https://www.linkedin.com/in/joegalley" onClick="ga('send', 'event', 'link', 'click', 'https://www.linkedin.com/in/joegalley', null, null);">
-						  		<i class="fa fa-linkedin"></i>
-							</a>
-						</li>
-						  <li>
-						  	<a href="https://github.com/joegalley" onClick="ga('send', 'event', 'link', 'click', 'https://github.com/joegalley', null, null);">
-						  		<i class="fa fa-github"></i>
-						  	</a>
-						  </li>
-						  <li>
-						  	<a href="https://twitter.com/joe_galley" >
-						  		<i class="fa fa-twitter" onClick="ga('send', 'event', 'link', 'click', 'https://twitter.com/joe_galley', null, null);"></i>
-						  	</a>
-						  </li>
-						</ul>
-					</div>							
+				</div>
+				<div class="eight columns">
+					<h5 class="content-paragraph-title">About Me</h5>
+					<div class="content-paragraph">
+						<p>
+							Welcome to my website. I maintain this site to discuss some of my interests - mostly 
+							things related to software and technology.  You can read some of the
+							<a href="articles.html">articles</a> I've written or check out some 
+							of my <a href="software.html">software</a>.
+						</p>
+						<p>						
+							My software interests include cloud computing, distributed and concurrent systems, software architecture, machine 
+							learning, mathematical optimization, operating systems, virtualization, computer networks, and mobile apps.
+						</p>
+						<p>
+							Some of my personal interests include: electronic music, travel, graphic design,
+							soccer, boxing, economics, finance, electrical engineering, history, and writing.
+						</p>
+					</div>
+					<br />
+					<div class="content-paragraph">
+						<p style="font-size: 12px; color: #a1a1a1">
+							<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+							<img alt="Creative Commons License" style="border-width:0" src="img/cc.png"/></a>
+							<br />
+							The views and opinions expressed on this webside are solely my own and do not represent the 
+							views or opinions of my employer.
+						</p>
+					</div>
 				</div>
 			</div>
-			<div class="eight columns">
-				<h5 class="content-paragraph-title">About Me</h5>
-				<div class="content-paragraph">
-					<p>
-						Welcome to my website. I maintain this site to discuss some of my interests - mostly 
-						things related to software and technology.  You can read some of the
-						<a href="articles.html">articles</a> I've written or check out some 
-						of my <a href="software.html">software</a>.
-					</p>
-					<p>						
-						My software interests include cloud computing, distributed and concurrent systems, software architecture, machine 
-						learning, mathematical optimization, operating systems, virtualization, computer networks, and mobile apps.
-					</p>
-					<p>
-						Some of my personal interests include: graphic design, electronic music, travel, 
-						soccer, economics, finance, electrical engineering, history, and writing.
-					</p>
-				</div>
-				<br />
-				<div class="content-paragraph">
-					<p style="font-size: 12px; color: #a1a1a1">
-						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-						<img alt="Creative Commons License" style="border-width:0" src="img/cc.png"/></a>
-						<br />
-						The views and opinions expressed on this webside are solely my own and do not represent the 
-						views or opinions of my employer.
-					</p>
-				</div>
-			</div>
-		</div>
-    </div>
+	    </div>
+	</div>
 	
 	<script type="text/javascript" src="js/ga.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
 </body>
 </html>

@@ -12,6 +12,7 @@
 
 	<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="../css/skeleton.css">
 	<link rel="stylesheet" href="../css/style.css">
@@ -28,45 +29,41 @@
 		.album-title {
 			font-weight: bold;
 		}
-		.album-container img {
-			height: 120px;
-			width: 120px;
+   
+		
+		.album-row {
+			margin-bottom: 50px;
 		}
-		.album-row .columns {
+		.album-row > p {
 			text-align: center;
 		}
-		.song-para {
-			text-align: justify;
-		}
-	
-   
-		@media (min-width: 400px) {}
-
-		@media (min-width: 550px) {
-			.album-container {
-				width: 200px;
-				height: 200px;
-			}
-			.album-container img {
-				height: 100%;
-				width: 100%;
-			}
-			.album-row .columns {
-				text-align: left;
-			}
-			.song-para {
-				text-align: left;
-			}
-		}	
-
-		@media (min-width: 750px) {
-
+		.album-row > img {
+			float:left; 
+			height: 142px; 
+			width: 142px;
+			margin-left: 10px; 
+			margin-right: 40px; 
+			margin-bottom: 10px;
 		}
 
-
-		@media (min-width: 1000px) {}
-
-		@media (min-width: 1200px) {}
+		@media (max-width: 550px) {	
+			.album-row {
+				margin-bottom: 30px;
+			}
+			.album-row > p:first-of-type {
+				text-align: center;
+				margin-top: 20px;
+			}
+			.album-row > span {
+				text-align: justify;
+    			display: block;
+			}
+			.album-row > img {
+				float: none;
+				display: block;
+    			margin: auto;
+			}	
+		}
 	</style>
 
 </head>
@@ -83,7 +80,7 @@
 					<li id="sm-menu-btn" class="navbar-item">
 						<a class="navbar-link" href="/index.html">
 							<span id="menu-icon">
-								<span class="icon-bars"></span>
+								<span class="fa fa-bars fa-2x"></span>
 							</span>
 						</a>
 					</li>
@@ -97,47 +94,39 @@
 			<div class="page-title">The 30 Best Kanye West Songs of All Time</div>
 				<div>
 					<span class="tags">Tags:
-						<span class="article-tag tag-eclipse">Eclipse</span>
+						<span class="article-tag tag-music">Music</span>
 					</span>
 				</div>
 				<hr>
-				<p>The 30 Best Kanye West Songs of All Time
+				<p>
+					The 30 Best Kanye West Songs of All Time
 				</p>
+		
 				<div class="row album-row">
-					<div class="four columns">
-						<span class="album-container">
-							<img src="https://upload.wikimedia.org/wikipedia/en/f/f0/My_Beautiful_Dark_Twisted_Fantasy.jpg" />
-						</span>
-					</div>
-					<div class="eight columns">
-						<p class="song-title">30. All of the Lights</p>
-						<p class="album-title">My Beautiful Dark Twisted Fantasy (2010)</p>
-						<p class="song-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing like Aldus PageMaker including versions of Lorem Ipsum.</p>
-					</div>
-				</div>	
-				<div class="row album-row">
-					<div class="four columns">
-						<span class="album-container">
-							<img src="../img/kw/y.jpg" />
-						</span>
-					</div>
-					<div class="eight columns">
-						<p class="song-title">1. Hold My Liquor</p>
-						<p class="album-title">Yeezus (2013)</p>
-						<p class="song-para"></p>
-					</div>
+					<img src="../img/kw/y.jpg" />
+					<p class="song-title">30. All of the Lights</p>
+					<p class="album-title">My Beautiful Dark Twisted Fantasy (2010)</p>
+					<span>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing like Aldus PageMaker including versions of Lorem Ipsum.
+					</span>
 				</div>
+
 				<div class="row album-row">
-					<div class="four columns">
-						<span class="album-container">
-							<img src="../img/kw/y.jpg" />
-						</span>
-					</div>
-					<div class="eight columns">
-						<p class="song-title">1. Hold My Liquor</p>
-						<p class="album-title">Yeezus (2013)</p>
-						<p class="song-para"></p>
-					</div>
+					<img src="../img/kw/y.jpg" />
+					<p class="song-title">30. All of the Lights</p>
+					<p class="album-title">My Beautiful Dark Twisted Fantasy (2010)</p>
+					<span>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing like Aldus PageMaker including versions of Lorem Ipsum.
+					</span>
+				</div>
+
+				<div class="row album-row">
+					<img src="../img/kw/y.jpg" />
+					<p class="song-title">30. All of the Lights</p>
+					<p class="album-title">My Beautiful Dark Twisted Fantasy (2010)</p>
+					<span>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing like Aldus PageMaker including versions of Lorem Ipsum.
+					</span>
 				</div>
 			</div>
 		<hr>

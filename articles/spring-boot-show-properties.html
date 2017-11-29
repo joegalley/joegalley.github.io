@@ -12,6 +12,7 @@
 
 	<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="../css/skeleton.css">
 	<link rel="stylesheet" href="../css/style.css">
@@ -32,7 +33,7 @@
 					<li id="sm-menu-btn" class="navbar-item">
 						<a class="navbar-link" href="/index.html">
 							<span id="menu-icon">
-								<span class="icon-bars"></span>
+								<span class="fa fa-bars fa-2x"></span>
 							</span>
 						</a>
 					</li>
@@ -50,31 +51,17 @@
 					<span class="article-tag tag-java">Java</span>
 				</span>
 			</div>
+
 			<hr>
-			<div class="quick-summary">
-				<p class="summary-title">Quick Summary:</p>
-				<div class="summary-body">
-					<p>1. Autowire an instance of Environment:</p>
-					<pre>
-						<code class="prettyprint lang-java">@Autowired
-Envornment env;</code>
-					</pre>
-					<p>2. Use this code somewhere in your class:</p>
-					<pre><code class="prettyprint lang-java">Map<String, Object> map = new HashMap();
 
-for (Iterator it = ((AbstractEnvironment) env).getPropertySources().iterator(); it.hasNext(); ) {
-	PropertySource propertySource = (PropertySource) it.next();
-	if (propertySource instanceof MapPropertySource) {
-		map.putAll(((MapPropertySource) propertySource).getSource());
-	}
-}</code></pre>
-				</div>
-			</div>
+			<p>
+				In Spring Boot, it may sometimes be helpful to view all of the currently loaded <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html">properties</a>. This can be done by autowiring an instace of <code>org.springframework.core.env.Environment</code> into the relevant class and calling <code>getPropertySources()</code> on it. In the example below, the <code>propertiesSorted</code> variable is a map containing key/value pairs for each property and its value.
+			</p>
+
+			<script src="https://gist.github.com/joegalley/26a2213ff09cf18521a5e82ebfc0b04f.js"></script>
 		</div>
-	</div
-	<hr>
-
-	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<hr>
+	</div>
 	
 </body>
 </html>
