@@ -1,0 +1,6 @@
+source: .
+destination: ./_site
+layouts_dir: ./_layouts
+data_dir: ./_data
+
+include: ['_pages', 'articles']

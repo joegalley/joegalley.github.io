@@ -1,0 +1,47 @@
+---
+layout: default
+title: 'How to Stop Eclipse from Auto-Formatting Comments'
+tags: spring-boot java
+---
+			<div class="page-title">How to Stop Eclipse from Auto-Formatting Comments</div>
+				<div>
+					<span class="tags">Tags:
+						<span class="article-tag tag-eclipse">Eclipse</span>
+					</span>
+				</div>
+				<hr>
+				<p><span class="drop-caps">E</span>clipse's ability to automaticlly format code is a great way to have clean, uniform looking code
+				in your projects.  However, there are probably some places that you'd rather Eclipse not touch.
+				A good example of this is commented-out SQL code.  SQL and Java code are typically formatted very
+				differently, so running the auto-formatter (<kbd>Ctrl + Shift + F</kbd> on Windows) will mangle SQL code.  Compare SQL
+				formatted by hand to the same code after running the formatter:
+				</p>		
+				<div class="row">
+					<div class="thumbnail">
+						<img class="u-max-full-width" src="{{ site.data.global.assetDir }}/img/1.png">
+						<div class="caption">
+							<p>SQL before formatting</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="thumbnail">
+						<img src="{{ site.data.global.assetDir }}/img/2.png">
+						<div class="caption">
+							<p>SQL after formatting</p>
+						</div>
+					</div>
+				</div>
+			<div>
+				<p>If you are using multi-line comments (/* */), the fix to prevent Eclipse from applying its auto-formatting
+				is very simple: just add a dash (-) after the asterisk at the beginning of the comment (see below).
+				</p>
+			</div>
+			<div class="row">
+				<div class="thumbnail">
+					<img src="{{ site.data.global.assetDir }}/img/3.png">
+					<div class="caption">
+						<p>The dash on line 148 prevents auto-formatting</p>
+					</div>
+				</div>
+			</div>

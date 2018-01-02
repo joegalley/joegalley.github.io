@@ -1,0 +1,22 @@
+---
+layout: default
+title: 'Spring Boot: How to List All Properties and their Values'
+tags: spring-boot java
+---
+	<div class="page-title">Spring Boot: How to List All Properties and their Values</div>
+		<div>
+				<span class="tags">Tags:
+					<span class="article-tag tag-spring">Spring Boot</span>
+					<span class="article-tag tag-java">Java</span>
+				</span>
+			</div>
+
+			<hr>
+
+			<p>
+				<span class="drop-caps">I</span>n Spring Boot, it may sometimes be helpful to view all of the currently loaded <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html">properties</a>. This can be done by autowiring an instace of <code>org.springframework.core.env.Environment</code> into the relevant class and calling <code>getPropertySources()</code> on it. In the example below, the <code>propertiesSorted</code> variable is a map containing key/value pairs for each property and its value.
+			</p>
+
+			<script src="https://gist.github.com/joegalley/26a2213ff09cf18521a5e82ebfc0b04f.js"></script>
+		</div>
+	</div>

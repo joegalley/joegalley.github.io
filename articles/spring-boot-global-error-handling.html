@@ -1,0 +1,38 @@
+---
+layout: default
+title: 'Spring Boot: Handling Errors Globally Without ExceptionHandler'
+tags: spring-boot java
+---
+			<div class="page-title">Spring Boot: Handling Errors Globally Without ExceptionHandler</div>
+			<div>
+				<span class="tags">Tags:
+					<span class="article-tag tag-spring">Spring Boot</span>
+					<span class="article-tag tag-java">Java</span>
+				</span>
+			</div>
+
+			<hr>
+	
+			<p>
+				<b>Quick Summary: Implementing the <code>configure()</code> method of the 
+				<code>EmbeddedServletContainerCustomizer</code> interface allows you to handle errors globally in a Spring Boot application.</b>
+			</p>
+
+	
+			<p>
+				<span class="drop-caps">A</span> common way of performing error-handling in Spring Boot is by using the <code>@ExceptionHandler</code>
+				and <code>@ControllerAdvice</code> annotations. However, handling errors in this way has one large downside:
+				it is only able to handle errors at the Controller level and below.  For example, if you have an <code>ExceptionHandler</code>
+				listening for <code>NullPointerException</code>s and one is thrown from within a Controller or a Service, then your method will
+				handle the exception.  However, if an unhandled exception is thrown from within
+				a <code>Filter</code> class or while rendering one your JSP pages, then you will probably see the default container
+				(aka Tomcat/Jetty) error page:
+			</p	>
+			<p>
+				Not only is this page very ugly to present to your end users, but it also may reveal information through the 
+				stace trace that is not indented to be seen.
+			</p>
+				There exists a great way in Spring Boot to handle errors thrown at <i>all</i> levels of the application (and 
+				prevent your users from ever seeing the default error page): the <b>EmbeddedServletContainerCustomizer</b> interface.					
+			</p>
+		</div>
