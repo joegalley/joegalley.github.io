@@ -1,0 +1,45 @@
+---
+layout: default
+title: 'Unix: How to View and Kill Processes Running on a Specific Port'
+tags: unix
+---
+			<div class="page-title">Unix: How to View and Kill Processes Running on a Specific Port</div>
+			<div>
+				<span class="tags">Tags:
+					<span class="article-tag tag-unix">Unix</span>
+				</span>
+			</div>
+
+			<hr>
+	
+			<p>
+				<b>Quick Summary: Implementing the <code>configure()</code> method of the 
+				<code>EmbeddedServletContainerCustomizer</code> interface allows you to handle errors globally in a Spring Boot application.</b>
+			</p>
+
+	
+			<p>
+				<span class="drop-caps">T</span>he Unix command <code>lsof</code> ("list open files") allows you to view
+				which process is listening on a specific port.  This is useful when you cannot track down the process that's 
+				using a port, such as a webserver listening on 8080.  
+			</p	>
+
+			<h5>The see which process(es) are running on a port:</h5>
+
+			<p>
+				<pre><code>sudo lsof -i :<port></code></pre>
+				<code><i>example:</i>sudo lsof -i :8080
+				Explaination: <code>-i</code> Displays processes listening on an Internet address
+			</p>
+
+			<h4>Automatically kill the process listening on a port:</h4>
+
+			<p>
+				Pipe the process ID into the <code>kill</code> command to kill it:
+				<code>lsof -t -i :3000 | xargs kill -9</code>
+
+				Explaination:
+				<code>-t</code>: Terse output. Only displays the process ID number
+				<code>			
+			</p>
+		</div>
