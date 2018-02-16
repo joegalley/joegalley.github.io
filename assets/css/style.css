@@ -319,11 +319,11 @@
 
 
 .drop-caps {
-	color: #903;
+	color: #000;
   	float: left;
   	font-family: Georgia;
-  	font-size: 75px;
-  	line-height: 60px;
+  	font-size: 60px;
+  	line-height: 45px;
   	padding-top: 4px;
   	padding-right: 8px;
   	padding-left: 3px;

@@ -15,12 +15,15 @@
 	<link rel="stylesheet" href="{{ site.data.global.assetDir }}/css/normalize.css">
 	<link rel="stylesheet" href="{{ site.data.global.assetDir }}/css/skeleton.css">
 	<link rel="stylesheet" href="{{ site.data.global.assetDir }}/css/style.css">
-    	<link rel="stylesheet" href="{{ site.data.global.assetDir }}/css/style.css">
+    <link rel="stylesheet" href="{{ site.data.global.assetDir }}/css/style.css">
 
 	<link rel="icon" type="image/png" href="favicon.png">
 
 	<title>{% if page.title %}{{ page.title }} | {{ site.data.global.title }}{% else %}{{ site.data.global.title }}{% endif %}</title>
 
+	{% for lang in page.language-highlights %}    	
+    	<link rel="stylesheet" href="{{ site.data.global.assetDir }}/css/highlight-{{ lang }}.css">
+  	{% endfor %}
 
 	<style>
 		#menu-icon {
