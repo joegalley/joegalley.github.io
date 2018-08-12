@@ -250,7 +250,9 @@
 .tag-javascript {
     background-color: #f1e05a;
 }
-
+.tag-http {
+    background-color: #329932;
+}
 .tag-linux {
     background-color: #777;
 }
@@ -265,6 +267,10 @@
 
 .tag-tomcat {
     background-color: #4f5a70;
+}
+
+.tag-web-development {
+    background-color: #ff0000;
 }
 
 .tag-windows {
@@ -329,6 +335,7 @@ pre>code {
     }
 }
 
+<<<<<<< HEAD
 @media (min-width: 550px) {
 	.content-paragraph-title {
 		font-size: 2.4rem;
@@ -384,3 +391,12 @@ pre>code {
         font-size: 4rem;
     }
 }
+=======
+.callout {
+	padding: 15px;
+	text-align: center;
+	border-right: 10px solid #00fa9a;
+	font-size: 1.7rem;
+}
+
+>>>>>>> ce972d438fae5043f7dfaa2dc0492a230b067638
