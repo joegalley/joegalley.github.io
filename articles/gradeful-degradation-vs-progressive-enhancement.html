@@ -1,0 +1,41 @@
+---
+layout: default
+title: 'Graceful Degradation vs Progressive Enhancement'
+tags: design
+---
+	<div class="page-title">Gradeful Degradation vs Progressive Enhancement</div>
+		<div>
+		<span class="tags">Tags:
+			<span class="article-tag tag-design">Design</span>
+		</span>
+	</div>
+
+	<hr>
+	
+	<p class="quick-summary">
+		Quick summary: Graceful degradation means using newer features that may not be supported everywhere but providing a solid fallback experience. Progressive
+		enhancement means developing with the most widly supported features and using newer ones only where supported. 
+	</p>
+
+	<p class="content-paragraph">
+		<span class="drop-caps">W</span>ith new web frameworks coming out every few months and new JavaScript and CSS libraries seemingly every few days, compatibility for older browsers and devices sometimes takes a back seat to the rapid pace of innovation on the web. For example, new CSS frameworks are using the flexbox standard which remains riddled with browser-specific <a href="https://github.com/philipwalton/flexbugs">issues</a>. Taking advantage of these new libraries often means wranging with obtuse IE issues, and at best, will make you weary anytime someone opens your website in an older browser. There are two philosophies for dealing with browser inconsistencies when it comes to supporting new features: graceful degradation and progressive enhancement.
+	</p>
+
+	<p class="content-paragraph-title">Gradeful Degradation</p>
+	<p>
+		As the name implies, graceful degradation allows your application to provide a slighlty degraded experience on browers that lack support for the latest and greatest web standards. This means that you can create your app using all the newest libraries and features, but you must do something to "fill-in" missing features that older browsers don't support. For example, CSS media queries are not suppored on IE8 and below, but there is a <a href="https://github.com/scottjehl/Respond">library</a> that uses JavaScript to mimic their behavior. These libraries that fill-in missing features on non-supported browers are called <a href="https://developer.mozilla.org/en-US/docs/Glossary/Polyfill">polyfills</a>. They allow you to develop applications that take advantage of newer features without writing code to implement specific features in old browsers.
+	</p>
+
+	<p class="content-paragraph">
+		The big advantage of graceful degradation for developers is using the latest web APIs and features without worrying about support for older browsers. But, this means that you must rely on polyfills in older browsers which are not always as slick as the native experience.
+	</p>
+
+	<p class="content-paragraph-title">Progressive Enhancement</p>
+	<p class="content-paragraph">
+		Progressive enhancement is the opposite of graceful degradation. Instead of using the newest web features and filling in gaps where necessary, progressive enhancement starts with only a base set of features that are expected to work for all users, and adds new features only where they are fully supported. This means that applications are developed with older browsers in mind first, and newer web features are only shown to users on browsers that support them. For example, rounded corners using <code>border-radius</code> is not supported in IE8, but a site developed with progressive enhancement in mind would allow IE8 users to see non-rounded corners and show them only to those using a newer browser that supports <code>border-radius</code>.
+	</p>
+
+	<p class="content-paragraph">
+		The advantage of progressive enhancement is that you can develop an application that nearly all users will be able to use. The disadvantage is that you are not always taking advantage of the latest web standards, and extra work must be done to show users the "enhanced" experience.
+	</p>
+</div>

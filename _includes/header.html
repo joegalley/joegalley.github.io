@@ -24,30 +24,6 @@
 	{% for lang in page.language-highlights %}    	
     	<link rel="stylesheet" href="{{ site.data.global.assetDir }}/css/highlight-{{ lang }}.css">
   	{% endfor %}
-
-	<style>
-		#menu-icon {
-			cursor: pointer;
-		}
-
-		.menu-dropdown-content {
-		    display: none;
-		    position: absolute;
-		    right: 0;
-		    background-color: #f9f9f9;
-		    min-width: 160px;
-		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		    z-index: 1;
-		}
-
-		.menu-dropdown-content a {
-		    color: black;
-		    padding: 12px 16px;
-		    text-decoration: none;
-		    display: block;
-		}
-	</style>
-
 </head>
 <body>
 
@@ -61,7 +37,7 @@
 				</span>
 				<span id="navbar-list-sm">
 					<li id="sm-menu-btn" class="navbar-item">
-						<a class="navbar-link">
+						<span class="navbar-link" style="margin: 0 auto;">
 							<span id="menu-icon">
 								<span class="fa fa-bars fa-2x"></span>
 							</span>
@@ -70,13 +46,13 @@
     							<a href="/articles">Articles</a>
     							<a href="/software">Software</a>
   							</div>
-						</a>
+						</span>
 					</li>
 				</span>
 			</ul>
 		</div>
     </nav>
 
-	<div class="container" style="width: 100%; border-bottom: 1px solid #eee; margin-bottom: 40px;">
+	<div class="container" style="width: 100%; border-bottom: 1px solid #e1e1e1; margin-bottom: 40px;">
 		<div class="main">			
 			
