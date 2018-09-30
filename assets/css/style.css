@@ -218,6 +218,23 @@
     vertical-align: baseline;
     border-radius: .25em;
 }
+<<<<<<< HEAD
+=======
+.tag-java { background-color: #b07219; }
+.tag-python { background-color: #3572A5; }
+.tag-c { background-color: #555555; }
+.tag-javascript { background-color: #f1e05a; }
+.tag-bash { background-color: #89e051; }
+.tag-spring { background-color: #6DB33F; }
+.tag-spring-security { background-color: #6DB33F; }
+.tag-linux { background-color: #777; }
+.tag-windows { background-color: #07abed; }
+.tag-android { background-color: #4b7d2f; }
+.tag-tomcat { background-color: #4f5a70; }
+.tag-eclipse { background-color: #2c2254; }
+.tag-web-development { background-color: #ff0000; }
+.tag-http { background-color: #329932; }
+>>>>>>> many changes
 
 .tag-android {
     background-color: #4b7d2f;
