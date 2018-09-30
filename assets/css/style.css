@@ -401,6 +401,9 @@ pre>code {
     .page-title {
         font-size: 4rem;
     }
+    .drop-caps {
+        font-size: 45px;
+    }
 }
 .callout {
 	padding: 15px;

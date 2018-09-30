@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 'Unix: How to View and Kill Processes Running on a Specific Port'
-tags: unix
+title: 'How to View and Kill Processes Running on a Specific Port'
+tags: linux bash
 ---
-		<div class="page-title">Unix: How to View and Kill Processes Running on a Specific Port</div>
+		<div class="page-title">How to View and Kill Processes Running on a Specific Port</div>
 			<div>
 				<span class="tags">Tags:
 					<span class="article-tag tag-linux">Linux</span>
@@ -12,15 +12,15 @@ tags: unix
 			</div>
 
 			<hr>
-	
+
 			<p class="quick-summary">
 				Quick Summary: <code>lsof -t -i :&lt;port&gt; | xargs kill -9</code>
 			</p>
-	
-			<p class="conent-paragraph">
+
+			<p class="content-paragraph">
 				<span class="drop-caps">T</span>he Unix command <code>lsof</code> ("list open files") allows you to view
-				which process is listening on a specific port.  This is useful when you cannot track down the process that's 
-				using a port, such as a webserver listening on 8080.  
+				which process is listening on a specific port.  This is useful when you cannot track down the process that's
+				using a port, such as a webserver listening on 8080.
 			</p>
 
 			<p class="content-paragraph-title">The see which process(es) are running on a port:</p>
@@ -28,24 +28,35 @@ tags: unix
 			<p>
 				<code>sudo lsof -i :&lt;port&gt;</code>
 			</p>
-			
-			<p class="conent-paragraph">
-				<b>example:</b> <code>sudo lsof -i :8080</code><br />
-				Explaination: <br />
-				<code style="margin-left: 3em;">-i</code> Displays processes listening on an Internet address
-			</p>
+
+			<p class="content-paragraph">
+				<b>Example:</b> <code>sudo lsof -i :8080</code><br />
+            </p>
+
+            <p class="content-paragraph">
+                <b>Explanation:</b> <br />
+                <code style="margin-left: 3em;">-i</code> Displays processes listening on an Internet address
+            </p>
 
 			<p class="content-paragraph-title">Automatically kill the process listening on a port:</p>
 
 			<p class="content-paragraph">
 				Pipe the process ID into the <code>kill</code> command to kill it:<br />
-				<code>lsof -t -i :&lt;port&gt;  | xargs kill -9</code>
-			
-				<b>example:</b> <code>lsof -t -i :3000 | xargs kill -9</code><br />
+            </p>
 
-				Explaination: <br />
-				<code style="margin-left: 3em;">-t</code>: Terse output. Only displays the process ID number<br />
-				<code style="margin-left: 3em;">xargs</code>: Takes the process ID from standard output and makes it the arguemnt to <code>kill</code><br />
-				<code style="margin-left: 3em;">kill -9</code>: Sends the SIGKILL signal to the process, causing it to terminate immediately <br />
-			</p>
+            <p>
+                <code>lsof -t -i :&lt;port&gt;  | xargs kill -9</code>
+            </p>
+
+            <p class="content-paragraph">
+
+                <b>Example:</b> <code>lsof -t -i :3000 | xargs kill -9</code><br />
+            </p>
+
+            <p class="content-paragraph">
+                <b>Explanation:</b> <br />
+                <code style="margin-left: 3em;">-t</code>: Terse output. Only displays the process ID number<br />
+                <code style="margin-left: 3em;">xargs</code>: Takes the process ID from standard output and makes it the arguemnt to <code>kill</code><br />
+                <code style="margin-left: 3em;">kill -9</code>: Sends the SIGKILL signal to the process, causing it to terminate immediately <br />
+            </p>
 		</div>
