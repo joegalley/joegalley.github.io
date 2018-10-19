@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://optimistic-mirzakhani-e4f837.netlify.com/* https://www.joegalley.com/:splat 301!
