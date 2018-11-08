@@ -36,7 +36,9 @@ tags: css design
 
 			<p class="content-paragraph">Below is an example of stylesheet written with desktop-first media queries.
 				Notice how it uses <code>max-width</code> rules.
-			<code><pre>
+			</p>
+
+<pre><code>
 ...
 // all rules outside of @media queries apply to devices 1201px and above
 ...
@@ -55,15 +57,16 @@ tags: css design
 	// rules here apply to devices from 0px to 768px
 	...
 }
-			</pre></code>
-			</p>
+</code></pre>
+
 
 			<p class="content-paragraph-title">Mobile-First Media Queries</p>
 
 			<p class="content-paragraph">Below is an example of stylesheet written with mobile-first media queries.
 				Notice how it uses <code>min-width</code> rules.
+			</p>
 
-<code><pre>
+<pre><code>
 ...
 // all rules outside of @media queries apply to devices from 0px to 767px
 ...
@@ -82,8 +85,7 @@ tags: css design
 	// rules here apply to devices 1200px and greater
 	...
 }
-</pre></code>
-			</p>
+</code></pre>
 
 			<p class="content-paragraph-title">Which one should you use?</p>
 
@@ -92,4 +94,3 @@ tags: css design
 				mobile-first media queries and override styles on progressively larger screen sizes. But if you expect
 				the desktop to take the most time to design for, then you should develop with desktop-first queries and
 				override styles on progressively smaller devices.
-		</div>
