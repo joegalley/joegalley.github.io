@@ -20,8 +20,12 @@
 
 	<title>{% if page.title %}{{ page.title }} | {{ site.data.global.title }}{% else %}{{ site.data.global.title }}{% endif %}</title>
 
+	{% if page.meta-desc %}
+	<meta name="description" content="{{ page.meta-desc }}"/>
+	{% endif %}
+
 	{% for lang in page.language-highlights %}    	
-    	<link rel="stylesheet" href="{{ site.data.global.assetDir }}/css/highlight-{{ lang }}.css">
+   	<link rel="stylesheet" href="{{ site.data.global.assetDir }}/css/highlight-{{ lang }}.css">
   	{% endfor %}
 </head>
 <body>
