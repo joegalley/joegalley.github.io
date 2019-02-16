@@ -1,4 +1,4 @@
-#### Code for my personal website: [joegalley.com](https://joegalley.com/)
+### Code for my personal website: [joegalley.com](https://joegalley.com/) [![Netlify Status](https://api.netlify.com/api/v1/badges/ae3dba7c-7e9a-43ae-8bb8-7ea03bc388cb/deploy-status)](https://app.netlify.com/sites/optimistic-mirzakhani-e4f837/deploys)
 
 ## Installation
 
