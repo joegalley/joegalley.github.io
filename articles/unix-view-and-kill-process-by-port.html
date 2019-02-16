@@ -31,7 +31,7 @@ tags: unix
 			
 			<p class="conent-paragraph">
 				<b>example:</b> <code>sudo lsof -i :8080</code><br />
-				Explaination: <br />
+				<br />Explaination: <br /><br />
 				<code style="margin-left: 3em;">-i</code> Displays processes listening on an Internet address
 			</p>
 
@@ -39,11 +39,14 @@ tags: unix
 
 			<p class="content-paragraph">
 				Pipe the process ID into the <code>kill</code> command to kill it:<br />
-				<code>lsof -t -i :&lt;port&gt;  | xargs kill -9</code>
+
+				<p>
+					<code>lsof -t -i :&lt;port&gt;  | xargs kill -9</code><br />
+				</p>
 			
 				<b>example:</b> <code>lsof -t -i :3000 | xargs kill -9</code><br />
 
-				Explaination: <br />
+				<br />Explaination: <br />
 				<code style="margin-left: 3em;">-t</code>: Terse output. Only displays the process ID number<br />
 				<code style="margin-left: 3em;">xargs</code>: Takes the process ID from standard output and makes it the arguemnt to <code>kill</code><br />
 				<code style="margin-left: 3em;">kill -9</code>: Sends the SIGKILL signal to the process, causing it to terminate immediately <br />
