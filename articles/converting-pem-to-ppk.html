@@ -1,0 +1,51 @@
+---
+layout: default
+title: 'How to Convert a .pem File to .ppk'
+tags: 
+---
+<div class="page-title">How to Convert a .pem File to .ppk</div>
+<div>
+		<span class="tags">Tags:
+            <span class="article-tag tag-devops">DevOps</span>
+			<span class="article-tag tag-aws">AWS</span>
+		</span>
+</div>
+
+<hr>
+
+<p class="content-paragraph"><span class="drop-caps">I</span>f you are dealing with SSH and using PuTTY, chances 
+    are you need a .ppk file to remotely connect to your server.
+</p>
+
+<p class="content-paragraph">A lot of open source software, as well as AWS, generate .pem files for you to use. But 
+    if you are using something like PuTTY or WinSCP, you will most likely need to use a .ppk file. Converting .pem 
+    files to .ppk is easy using a program called PuTTYgen.
+</p>
+
+<p class="content-paragraph">PuTTY and PuTTYgen can be downloaded from <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">here</a>. The installer will install both PuTTY and PuTTYgen. After you have it installed, open PuTTYgen, 
+    which should look something like this:
+</p>
+
+<img class="u-max-full-width img-center" src="{{ site.data.global.assetDir }}/img/convert-pem-to-ppk/puttygen-1.png">
+
+<p class="content-paragraph">Click on "Load" and select your .pem file. (If you're on Windows and don't see the file, 
+    make sure you're viewing "All Files (*)" and not just "PuTTY Private Key Files (*.ppk)").
+</p>
+
+<img class="u-max-full-width img-center" src="{{ site.data.global.assetDir }}/img/convert-pem-to-ppk/puttygen-2.png">
+
+<p class="content-paragraph">If you get a pop up that says something about "Successfully imported foreign key 
+    (OpenSSH SSH-2 private key (old PEM format))...", just click "OK". Click "Save Private Key". You will see this warning:
+</p>
+
+<img class="u-max-full-width img-center" src="{{ site.data.global.assetDir }}/img/convert-pem-to-ppk/puttygen-3.png">
+
+<p class="content-paragraph">Adding a passphrase depends on your use case. For example, you may be using this key in a 
+    3rd-party Continuous Integration pipeline that isn't able to decrypt SSH keys so you won't want a passphrase.
+</p>
+
+<p class="content-paragraph">Now you're able save your converted .pem file in .ppk format!</p>
+
+
+
+

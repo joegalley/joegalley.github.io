@@ -18,49 +18,53 @@ tags: css design
 			</p>
 
 			<p class="content-paragraph">
-				<span class="drop-caps">M</span>edia queries in CSS allow to you specify style rules that apply only to specific screen sizes. This is a great way to acheive responsive design and is how many grid-based CSS libraries (such as Bootstrap) acheive responsiveness. Since we are typically worried about screen width, there are two important media query rules that apply: <code>min-width</code> and <code>max-width</code>.
+				<span class="drop-caps">M</span>edia queries in CSS allow to you specify style rules that apply only to specific screen sizes. This is a great way to achieve responsive design and is how many grid-based CSS libraries (such as Bootstrap) achieve responsiveness. Since we are typically worried about screen width, there are two important media query rules that apply: <code>min-width</code> and <code>max-width</code>.
 			</p>
 
-			<p>The difference between desktop-first and media-first media queries lies in how the CSS rules outside of any media query rules (not within a <code>@media</code> block) are treated. In desktop-first mode, these rules apply only to the largest screens, and in mobile-first mode they apply to the smallest screens.
+			<p class="content-paragraph">The difference between desktop-first and media-first media queries lies in how any CSS rules that are not inside of a <code>@media</code> block are treated. In desktop-first mode, these rules apply only to the largest screens. In mobile-first mode they apply to the smallest screens.
 
 			<p class="content-paragraph-title">Desktop-First Media Queries</p>
 			<p class="content-paragraph">Below is an example of stylesheet written with desktop-first media queries. Notice how it uses <code>max-width</code> rules.
-			<code><pre>
+<pre><code>
+
 ...
 // all rules outside of @media queries apply to devices 1201px and above
 ...
+
 @media (max-width: 1200px) {
 	...
-	// rules here apply to devices from 993px to 1200px
+	// rules here apply to devices from 993px to 1200px (inclusive)
 	...
 }
 @media (max-width: 992px) {	
 	...
-	// rules here apply to devices from 769px to 992px
+	// rules here apply to devices from 769px to 992px (inclusive)
 	...
 }
 @media (max-width: 768px) {
 	...
-	// rules here apply to devices from 0px to 768px
+	// rules here apply to devices from 0px to 768px (inclusive)
 	...
 }
-			</pre></code>
+</code></pre>
 			</p>
 
 			<p class="content-paragraph-title">Mobile-First Media Queries</p>
 			<p class="content-paragraph">Below is an example of stylesheet written with mobile-first media queries. Notice how it uses <code>min-width</code> rules.
-<code><pre>
+<pre><code>
+
 ...
-// all rules outside of @media queries apply to devices from 0px to 767px
+// all rules outside of @media queries apply to devices from 0px to 767px (inclusive)
 ...
+
 @media (min-width: 768px) {
 	...
-	// rules here apply to devices from from 768px to 991px
+	// rules here apply to devices from from 768px to 991px (inclusive)
 	...
 }
 @media (min-width: 992px) {	
 	...
-	// rules here apply to devices from 992px to 1199px
+	// rules here apply to devices from 992px to 1199px (inclusive)
 	...
 }
 @media (min-width: 1200px) {
@@ -68,9 +72,16 @@ tags: css design
 	// rules here apply to devices 1200px and greater
 	...
 }
-</pre></code>
+</code></pre>
 			</p>
 
 			<p class="content-paragraph-title">Which one should you use?</p>
-			<p class="content-paragraph">As the names suggest, mobile-first media queries are better for mobile centric design and vice-versa. If you expect your mobile design to be more complex, it is better to use mobile-first media queries and override styles on progressively larger screen sizes. But if you expect the desktop to take the most time to design for, then you should develop with desktop-first queries and override styles on progressively smaller devices.
+			<p class="content-paragraph">
+				As the names suggest, mobile-first media queries are better for mobile centric design and vice-versa. This is again due to how the rules "outside" of the <code>@media</code> blocks are treated. If you are expecting your mobile designs to be more complex, mobile-first media queries are better because most of your rules will apply to mobile screens, and you will just be "modifying" the base design for larger screens.
+			</p>
+			
+			<p class="content-paragraph">
+				If you expect your desktop design to be more complex, it is better to use desktop-first media queries. Your base CSS rules
+				will apply to large screens by default and you will just be "modifying" this base template on progressively smaller screens.
+			</p>
 		</div>
