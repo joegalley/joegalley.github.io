@@ -1,0 +1,74 @@
+---
+layout: default
+title: 'How to Set Up SASS on Windows'
+tags: 
+---
+<div class="page-title">How to Set Up SASS on Windows</div>
+<div>
+	<span class="tags">Tags:
+        <span class="article-tag tag-css">CSS</span>
+	</span>
+</div>
+
+<hr>
+
+<p class="content-paragraph">
+    <span class="drop-caps">W</span>riting and managing CSS has become much more enjoyable with the
+    invention of variou preprocessors and extensions. One of the most popular is <a href="https://sass-lang.com" target="_blank">SASS</a>.
+    SASS ("Syntactically Awesome Style Sheets") has its own syntax and features which compile down to regular old CSS. There are various SASS compilers such as Ruby SASS, libsass, and dart-sass. In this article, I will explain how to get up and running with dart-sass on Windows.
+</p>
+
+<p class="content-paragraph-sub-title">
+    1. Go to <a href="https://github.com/sass/dart-sass/releases" target="_blank">https://github.com/sass/dart-sass/releases</a> and download the zip file for the latest version of dart-sass
+</p>
+
+<p class="content-paragraph-sub-title">
+    2. Extract the .zip file and move it save it somewhere
+</p>
+<p class="content-paragraph">The root folder will be called "dart-sass" and will have a structure similar to this:
+    <pre><code>
+    -- dart-sass
+    ------ dart-sass.bat
+    ------ sass.bat
+    ---------- dart.exe
+    ---------- DART_LICENSE
+    ---------- sass.dart.snapshot
+    ---------- SASS_LICENSE
+    </code></pre>
+</p>
+
+<p class="content-paragraph-sub-title">
+    3. Add dart-sass to your $PATH
+</p>
+<p class="content-paragraph">
+    For example, if you moved the dart-sass folder to "Program Files", then you should append something like
+    this to your PATH: <b>C:\Program Files\dart-sass-1.17.0-windows-x64\dart-sass</b>. See <a href="https://katiek2.github.io/path-doc" 
+    target="_blank">https://katiek2.github.io/path-doc</a> for help on setting the Windows $PATH. 
+</p>
+
+<p class="content-paragraph-sub-title">
+    4. Ensure SASS is installed correctly
+</p>
+<p class="content-paragraph">
+    If you had a command prompt open before you added dart-sass to your PATH, close it and open a new one. If not, open a command prompt
+    and type <code>sass -version</code>. You should see the version of SASS you just installed, e.g. <code>Sass 3.5.5 (Bleeding Edge)</code>.
+</p>
+
+<p class="content-paragraph-sub-title">
+    5. (Optional) Compile Your First SASS File
+</p>
+<p class="content-paragraph">
+    SASS works by transforming a <code>.scss</code> file in to a <code>.css</code> file. (Confusingly, the SASS file extension is
+    <code>.scss</code>. <code>.sass</code> is considered to be the "old" type, and <code>.scss</code> is the current standard. See
+    <a href="https://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass" target="_blank">https://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass</a>). 
+</p>
+<p class="content-paragraph">
+    The syntax for compiling a <code>.scss</code> file into a <code>.css</code> is:
+    <pre><code>sass my-file.scss my-file.css</code></pre>
+    where <code>my-file.scss</code> is the input and <code>my-file.css</code> is the generated CSS file.
+
+</p>
+
+
+
+
